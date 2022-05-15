@@ -1,0 +1,52 @@
+*FIRST TABLE:
+
+--- TO CREATE THE TABLE / DECLARE THE COLUMNS:
+
+CREATE TABLE student_info (
+  name VARCHAR,
+  family VARCHAR,
+  address VARCHAR,
+  number INT,
+  id INT
+  ); 
+
+--- TO INSERT THE DATA:
+
+INSERT INTO student_info (name, family, address, number, id)
+VALUES ('Daniel ', ' Tonini', '67, avenue de l Europei', 78000, 12);
+__________________________________________________
+*SECOND TABLE:
+
+--- AFTER CREATING THE NEW TABLE FOR THE MARKS (TBL_marks),
+ 
+INSERT INTO TBL_marks (info, physics, chemistry, math)
+VALUES ('STUDENT 1', 18, 10, 16)
+VALUES ('STUDENT 2', 13, 18, 15)
+VALUES ('STUDENT 3', 14, 13, 10)
+
+--- TO GET THE AVERAGE OF EACH COLUMN:
+
+SELECT AVG(physics) from TBL_marks; --> 15
+SELECT AVG(chemistry) from TBL_marks; --> 13.6
+SELECT AVG(math) from TBL_marks; --> 13.6
+
+--- TO GET THE MIN & MAX OF EACH COLUMN:
+
+SELECT MIN(physics) from (TBL_marks); --> 13
+SELECT MIN(chemistry) from (TBL_marks); --> 10
+SELECT MIN(math) from (TBL_marks); --> 10
+
+SELECT MAX(physics) from (TBL_marks); --> 18
+SELECT MAX(chemistry) from (TBL_marks); --> 18
+SELECT MAX(math) from (TBL_marks); --> 16
+
+
+--- TO GET THE SUM OF COLUMNS:
+SELECT SUM(physics) from (TBL_marks); --> 45
+SELECT SUM(chemistry) from (TBL_marks); 41
+SELECT SUM(math) from (TBL_marks); --> 41
+
+
+
+
+
